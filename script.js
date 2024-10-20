@@ -82,7 +82,9 @@ const songs = [
     "Music/Tràn bộ nhớ.mp3",
     "Music/Eyes.mp3",
     "Music/Sóng.mp3",
-    "Music/MCK.mp3"
+    "Music/MCK.mp3",
+    "Music/BTM.mp3",
+    "Music/DWAL.mp3"
 ];
 
 // Set the initial song
