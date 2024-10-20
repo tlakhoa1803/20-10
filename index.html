@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Women Day</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="envelope" id="envelope">
+      <div class="cover"></div>
+      <div class="letter">💌</div>
+    </div>
+    <div class="message" id="message">
+      <h1>Happy Women Day 20/10</h1>
+    </div>
+    
+    <div class="heart-animation" id="heartAnimation"></div>
+
+    <audio id="music" preload="auto"></audio>
+      
+    <select id="musicSelect">
+        <option value="" disabled selected>Select a song</option>
+        <option value="Music/Sao hạng A.mp3">Sao hạng A</option>
+        <option value="Music/Chân thành.mp3">Chân thành</option>
+        <option value="Music/Catch me.mp3">Catch me if you can</option>
+        <option value="Music/Em.mp3">Em</option>
+        <option value="Music/Hào quang.mp3">Hào quang</option>
+        <option value="Music/KPKG.mp3">Kim phút kim giờ</option>
+        <option value="Music/Thi sĩ.mp3">Thi sĩ</option>
+        <option value="Music/Ở lại đây.mp3">Ở lại đây</option>
+        <option value="Music/Khi cơn mưa dần phai">Khi cơn mưa dần phai</option>
+        <option value="Music/Anh là ai.mp3">Anh là ai</option>
+        <option value="Music/ABR.mp3">Anh biết rồi</option>
+        <option value="Music/QDQL.mp3">Quay đi quay lại</option>
+        <option value="Music/Tràn bộ nhớ.mp3">Tràn bộ nhớ</option>
+        <option value="Music/Eyes.mp3">Eyes</option>
+        <option value="Music/Sóng.mp3">Sóng vỗ vỡ bờ</option>
+        <option value="Music/MCK.mp3">Anh vẫn ok</option>
+        <!-- Add more songs here -->
+    </select>
+    <button id="playBtn" disabled>Play Music</button>
+    
+    <!-- Nút Next và Back -->
+    <button id="prevBtn" disabled>Back</button>
+    <button id="nextBtn">Next</button>
+
+    <div class="volume-control">
+      <label for="volume">Volume:</label>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

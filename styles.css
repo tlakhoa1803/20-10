@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #add8e6;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+.container {
+  text-align: center;
+}
+.envelope .letter {
+  top: 112.5px;
+  width: 100%;
+  height: 100%;
+  font-size: 400px; /* Phóng to biểu tượng lá thư */
+}
+
+.message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #ff007f;
+  text-align: center;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500px);
+    opacity: 1;
+  }
+}
+
+/* Heart Animation */
+#heartAnimation {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+}
+
+.heart {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  transform: rotate(-45deg);
+  animation: pulse 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -25px;
+  left: 0;
+}
+
+.heart::after {
+  left: 25px;
+  top: 0;
+}
+
+/* Đặt các trái tim ở các vị trí cố định tạo thành hình chữ nhật bao quanh văn bản */
+#heartAnimation .heart:nth-child(1) {
+  top: -80px; /* Góc trên bên trái */
+  left: -120px;
+}
+
+#heartAnimation .heart:nth-child(2) {
+  top: -80px; /* Góc trên bên phải */
+  left: 120px;
+}
+
+#heartAnimation .heart:nth-child(3) {
+  top: 80px; /* Góc dưới bên trái */
+  left: -120px;
+}
+
+#heartAnimation .heart:nth-child(4) {
+  top: 80px; /* Góc dưới bên phải */
+  left: 120px;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(-45deg);
+  }
+  100% {
+    transform: scale(0.95) rotate(-45deg);
+  }
+}
+
+
+#playBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1db954; /* Spotify green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#playBtn:hover {
+  background-color: #1aa34a; /* Darker green on hover */
+}
+.volume-control {
+  margin-top: 20px;
+}
+
+.volume-control label {
+  margin-right: 5px;
+}
+/* Tùy chỉnh thanh kéo âm thanh */
+input[type="range"] {
+  appearance: none; /* Ẩn kiểu mặc định */
+  width: 300px; /* Độ dài của thanh kéo */
+  height: 13px; /* Độ dày của thanh kéo */
+  background: #ff007f; /* Màu nền */
+  border-radius: 5px; /* Bo góc */
+  outline: none; /* Ẩn viền khi chọn */
+}
+
+/* Tùy chỉnh cho nút kéo */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Ẩn kiểu mặc định */
+  width: 20px; /* Đường kính của nút kéo */
+  height: 20px; /* Đường kính của nút kéo */
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Heart_empty_font_awesome.svg/1024px-Heart_empty_font_awesome.svg.png') no-repeat center; /* Hình ảnh trái tim */
+  background-size: cover; /* Tỉ lệ hình ảnh */
+  cursor: pointer; /* Con trỏ chuột */
+}
+#prevBtn{
+  background-color: #1db954;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px
+}
+#nextBtn{
+  background-color: #1db954;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px
+}
+#nextBtn:hover{
+  background-color: #1aa34a;
+}
+#prevBtn:hover{
+  background-color: #1aa34a;
+}
+#musicSelect{
+  background-color: #e6e6fa;
+  border-radius: 5px;
+  cursor: pointer;
+  font-style: oblique;
+}
