@@ -1,7 +1,7 @@
 document.getElementById("envelope").addEventListener("click", function() {
   // Animation to open the envelope
   this.style.transform = "rotateX(-90deg)";
-  
+
   // Show the message after opening the envelope
   setTimeout(() => {
     document.getElementById("message").style.display = "block";
@@ -15,7 +15,7 @@ function confettiEffect() {
   const defaults = {
     origin: { y: 0.7 },
   };
-  
+
   function fire(particleRatio) {
     confetti(Object.assign({}, defaults, {
       particleCount: Math.floor(count * particleRatio),
@@ -26,7 +26,7 @@ function confettiEffect() {
       colors: ['#ff007f', '#00ff7f', '#007fff', '#ff7f00']
     }));
   }
-  
+
   fire(0.25);
   fire(0.25);
   fire(0.25);
@@ -75,7 +75,7 @@ const songs = [
     "Music/KPKG.mp3",
     "Music/Thi sĩ.mp3",
     "Music/Ở lại đây.mp3",
-    "Music/Khi cơn mưa dần phai",
+    "Music/Khi cơn mưa dần phai.mp3",
     "Music/Anh là ai.mp3",
     "Music/ABR.mp3",
     "Music/QDQL.mp3",
@@ -103,6 +103,7 @@ music.addEventListener("ended", function() {
     }
     music.src = songs[currentSongIndex];
     music.play(); // Play the next song
+    playBtn.innerText = "Pause Music"; // Change button text to "Pause Music"
     updateButtonState(); // Update button state
 });
 
@@ -111,6 +112,8 @@ musicSelect.addEventListener("change", function() {
     currentSongIndex = this.selectedIndex - 1; // Update index based on selection
     music.src = songs[currentSongIndex];
     playBtn.disabled = false; // Enable play button
+    music.play(); // Automatically play the selected song
+    playBtn.innerText = "Pause Music"; // Change button text to "Pause Music"
     updateButtonState(); // Update button state
 });
 
@@ -133,6 +136,7 @@ prevBtn.addEventListener("click", function() {
     }
     music.src = songs[currentSongIndex];
     music.play(); // Play the previous song
+    playBtn.innerText = "Pause Music"; // Change button text to "Pause Music"
     updateButtonState(); // Update button state
 });
 
@@ -144,6 +148,7 @@ nextBtn.addEventListener("click", function() {
     }
     music.src = songs[currentSongIndex];
     music.play(); // Play the next song
+    playBtn.innerText = "Pause Music"; // Change button text to "Pause Music"
     updateButtonState(); // Update button state
 });
 
